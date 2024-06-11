@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TREVOR ON SOLANA</title>
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon/trevorFavicon.ico">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo-container">
+                <img src="assets/images/icons/trevor-logo.png" alt="Trevor Logo" class="logo">
+                <h1 class="trevor-name">TREVOR</h1>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#presale-main">PRESALE</a></li>
+                    <li><a href="#roadmap">ROADMAP</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-icons">
+                <a href="https://x.com/trevor_inu" target="_blank"><img src="assets/images/icons/x.png" alt="X"></a>
+                <a href="https://telegram.com" target="_blank"><img src="assets/images/icons/telegram.png" alt="Telegram"></a>
+                <a href="https://instagram.com" target="_blank"><img src="assets/images/icons/instagram.png" alt="Instagram"></a>
+
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="main-presale-container">
+
+                <div class="timer-container"  id="presale-main">
+                    <h1 id="timer-label">PRESALE ENDS IN:</h1>
+                    <h1 id="timer" class="timer"></h1>
+                </div>
+    
+                <div id ="presale" class="container">
+                        <div class="column left-column">
+                            <div class="chart-outer-container">
+                                <h1>TOKENOMICS</h1>
+                                <div class="chart-container">
+                                    <canvas id="donutChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+                    <div class="column right-column">
+                        <div class="right-content">
+                            <div class="content-container">           
+                                <div class="form-outer-container">
+                                    <h1 class="presale-text">PRESALE - V2</h1>
+                                    <div class="progress-bar">
+                                        <div class="progress" id="progress"></div>
+                                    </div>
+                                    <div class="form-inner-container">
+                                        <h1 for="sol-amount" class="solana-amount">CHOOSE SOL AMOUNT</h1>
+                                        <input type="number" id="sol-amount" min="0.1" placeholder="*(0.1 SOL minimum)">
+                                        <h1 class="or-text">OR</h1>
+                                        <div class="buttons">
+                                            <button onclick="setAmount(0.25)">0.25 SOL</button>
+                                            <button onclick="setAmount(0.5)">0.5 SOL</button>
+                                            <button onclick="setAmount(1)">1 SOL</button>
+                                        </div>
+                                    </div>
+                                    <div class="action-buttons">
+                                        <button id="connect-wallet-btn" class="connect-wallet-btn">CONNECT WALLET</button>
+                                        <button class="buy-trevor-btn" onclick="buyTrevor()">BUY TREVOR</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div id="roadmap" class="roadmap-container">
+                <h1>ROADMAP</h1>
+
+                <div class="three-columns">
+                    <div class="column-r-left">
+                        <div class="goal-odd first">
+                            <h2><s>PRESALE V1</s></h2>
+                        </div>
+                        <div class="goal-odd third">
+                            <h2>RAYDIUM LISTING</h2>
+                        </div>
+                        <div class="goal-odd fifth">
+                            <h2>10M MARKET CAP</h2>
+                            <hr>
+                            <p>Start of VESTING PERIOD!</p>
+                        </div>
+                    </div>
+    
+                    <div class="column-r-center"></div>
+    
+                    <div class="column-r-right">
+                        <div class="goal-even second">
+                            <h2>PRESALE V2</h2>
+                        </div>
+                        <div class="goal-even fourth">
+                            <h2>1M MARKET CAP</h2>
+                            <hr>
+                            <p>Private Discord Server for holders with more than 1% of total supply!</p>
+                        </div>
+                        <div class="goal-even sixth">
+                            <h2>100M MARKET CAP</h2>
+                            <hr>
+                            <p>Token 2.0 AIRDROP for all TREVOR holders!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mail">
+                <div class="mail-container">
+                    <div class="column-mail">
+                        <div class="outter-container-mail">
+                            <h1>SIGN UP FOR NEWS & EVENTS</h1>
+                            <input type="email" id="email-collector" placeholder="example@mail.com">
+                            <button class="mail-button">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/connectAndBuy.js"></script>
+
+    </body>
+</html>
